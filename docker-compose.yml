@@ -1,7 +1,13 @@
-version: '2'
+version: '3.1'
+
+volumes:
+  mongo_data:
+    external: true
 
 services:
-  consul:
-    image: consul
-    command: consul agent -server -bootstrap -data-dir /tmp/consul -bind=127.0.0.1 -ui
-    network_mode: host
+  mongo:
+    image: mongo
+    volumes:
+      - mongo_data:/data/db
+    ports:
+      - 27027:27017

@@ -1,11 +1,10 @@
 package: github.com/alexx2012/go-home
 import:
-- package: github.com/AsynkronIT/protoactor-go
-- package: github.com/AsynkronIT/goconsole
-- package: github.com/hashicorp/consul
-  version: v1.0.0-beta2
-  subpackages:
-  - api
-- package: github.com/AsynkronIT/gonet
 - package: google.golang.org/grpc
-  version: v1.6.0
+  version: v1.7.0
+- package: github.com/emicklei/go-restful
+  version: v2.4.0
+- package: gopkg.in/mgo.v2
+- package: github.com/stretchr/testify
+  version: v1.1.4
+- package: github.com/karlkfi/inject
